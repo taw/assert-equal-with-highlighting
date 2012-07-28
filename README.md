@@ -25,8 +25,8 @@ old `escape.rb` is on your system:
 TODO
 ====
 
-assert-equal-with-highlighting is an old-style Rails plugin, and it could really use removing
-dependence on ActionController, and making it a proper gem.
+assert-equal-with-highlighting started as an old-style Rails plugin, it could really use
+turning it into a proper gem.
 
 Since order of hashes is unpredictable in 1.8.x (and predictable, but not in useful way in 1.9),
 highlighting of hashes is pretty bad.

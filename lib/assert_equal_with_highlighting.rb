@@ -1,5 +1,4 @@
 require 'test/unit'
-require 'action_controller/test_case'
 require 'diff/lcs'
 
 module AssertEqualWithHighlighting
@@ -68,8 +67,4 @@ module AssertEqualWithHighlighting
 EOT
     end
   end
-end
-
-class ActiveSupport::TestCase
-  include AssertEqualWithHighlighting::InstanceMethods
 end
