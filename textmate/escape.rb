@@ -1,21 +1,21 @@
 # escape text to make it useable in a shell script as one “word” (string)
 def e_sh(str)
-	str.to_s.gsub(/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/, '\\').gsub(/\n/, "'\n'").sub(/^$/, "''")
+  str.to_s.gsub(/(?=[^a-zA-Z0-9_.\/\-\x7F-\xFF\n])/, '\\').gsub(/\n/, "'\n'").sub(/^$/, "''")
 end
 
 # escape text for use in a TextMate snippet
 def e_sn(str)
-	str.to_s.gsub(/(?=[$`\\])/, '\\')
+  str.to_s.gsub(/(?=[$`\\])/, '\\')
 end
 
 # escape text for use in a TextMate snippet placeholder
 def e_snp(str)
-	str.to_s.gsub(/(?=[$`\\}])/, '\\')
+  str.to_s.gsub(/(?=[$`\\}])/, '\\')
 end
 
 # escape text for use in an AppleScript string
 def e_as(str)
-	str.to_s.gsub(/(?=["\\])/, '\\')
+  str.to_s.gsub(/(?=["\\])/, '\\')
 end
 
 # URL escape a string but preserve slashes (idea being we have a file system path that we want to use with file://)
@@ -55,7 +55,7 @@ def colored_htmlize(str)
         'blue',
         'magenta',
         'cyan',
-        'white',        
+        'white',
       ][value % 10]
       open_tags << "span"
       if value >= 40
